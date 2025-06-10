@@ -16,20 +16,17 @@ export default function Home() {
             setCurrentImageIndex((prevIndex) =>
                 (prevIndex + 1) % backgroundImages.length
             );
-        }, 5000); // Change image every 5 seconds (5000 milliseconds)
+        }, 5000); 
 
-        // Cleanup function to clear the interval when the component unmounts
         return () => clearInterval(intervalId);
-    }, [backgroundImages.length]); // Re-run effect if number of images changes
+    }, [backgroundImages.length]); 
 
-    // Function to handle manual navigation (left arrow)
     const goToPreviousImage = () => {
         setCurrentImageIndex((prevIndex) =>
             (prevIndex - 1 + backgroundImages.length) % backgroundImages.length
         );
     };
 
-    // Function to handle manual navigation (right arrow)
     const goToNextImage = () => {
         setCurrentImageIndex((prevIndex) =>
             (prevIndex + 1) % backgroundImages.length
@@ -38,20 +35,18 @@ export default function Home() {
 
     return (
         <div
-            className="relative w-full min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-start overflow-hidden transition-all duration-1000 ease-in-out"
-            style={{ backgroundImage: `url("${backgroundImages[currentImageIndex]}")` }}
+            className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat bg-fixed text-white flex flex-col items-center justify-start overflow-hidden transition-all duration-1000 ease-in-out"
+            style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("${backgroundImages[currentImageIndex]}")`,
+            }}
         >
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-
             {/* Header */}
             <header className="w-full flex justify-between items-center p-4 md:px-8 lg:px-12 z-20 box-border">
-                {/* Daffodils Group Logo SVG */}
                 <div className="bg-yellow-300 rounded-full px-4 py-2 text-black font-bold">
                     Daffodils
                 </div>
                 
-                <div className="text-3xl cursor-pointer">&#x2261;</div> {/* Hamburger icon */}
+                <div className="text-3xl cursor-pointer">&#x2261;</div> 
             </header>
 
             {/* Main Content */}
@@ -73,7 +68,7 @@ export default function Home() {
                 </a>
             </main>
 
-            {/* Navigation Arrows (manual control) */}
+            {/* Navigation Arrows */}
             <div
                 className="absolute top-1/2 -translate-y-1/2 left-2 text-5xl cursor-pointer z-20 text-white opacity-70 hover:opacity-100 transition-opacity"
                 onClick={goToPreviousImage}
@@ -89,17 +84,17 @@ export default function Home() {
 
             {/* WhatsApp Button */}
             <a
-                href="https://wa.me/yourphonenumber" // Replace with your actual WhatsApp number
+                href="https://wa.me/yourphonenumber" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-5 right-5 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-lg cursor-pointer z-50 hover:bg-green-600 transition-colors"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/whatsapp-stroke-standard.svg" role="img" color="#ffffff">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" className="injected-svg" data-src="https://cdn.hugeicons.com/icons/whatsapp-stroke-standard.svg" role="img" color="#ffffff">
                     <path d="M8.6175 12.4037L10.4966 10.5L10.0004 7H7C7.00036 10 8.58063 13.4407 11.6225 15.4209M11.6225 15.4209C13.1131 16.3912 14.9993 17 17 17V14L13.4982 13.5L11.6225 15.4209Z" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                     <path d="M12.0019 22.002C17.5259 22.002 22.0039 17.5239 22.0039 12C22.0039 6.47607 17.5259 1.99805 12.0019 1.99805C6.47802 1.99805 2 6.47607 2 12C2 13.8889 2.43396 15.4979 3.34399 17.005L2.00177 22L6.97239 20.666C8.48539 21.5862 10.1017 22.002 12.0019 22.002Z" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                 </svg>
                 <div className="absolute bottom-[-25px] text-xs text-gray-200 whitespace-nowrap">
-                    GetButton
+                    Contact
                 </div>
             </a>
         </div>
