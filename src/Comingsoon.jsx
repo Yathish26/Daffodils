@@ -4,7 +4,7 @@ import { MessageSquare } from "lucide-react"; // Import MessageSquare for the Wh
 
 const ComingSoon = () => {
   return (
-    <div className="min-h-screen bg-black text-white font-inter flex flex-col items-center justify-start overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-black to bg-blue-900 text-white font-inter flex flex-col items-center justify-start overflow-hidden">
       {/* Header section */}
       <header className="w-full max-w-7xl px-8 py-6 flex justify-between items-center z-10">
         {/* Logo section */}
