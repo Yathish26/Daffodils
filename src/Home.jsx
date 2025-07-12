@@ -316,11 +316,11 @@ const Home = () => {
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm font-medium">Your Name</label>
-                <input type="text" id="name" className="w-full px-4 py-3 bg-black/30 border border-blue-900/50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="John Doe" required />
+                <input type="text" id="name" className="w-full px-4 py-3 bg-black/30 border border-blue-900/50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Name" required />
               </div>
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium">Your Email</label>
-                <input type="email" id="email" className="w-full px-4 py-3 bg-black/30 border border-blue-900/50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="john@company.com" required />
+                <input type="email" id="email" className="w-full px-4 py-3 bg-black/30 border border-blue-900/50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email" required />
               </div>
               <div>
                 <label htmlFor="message" className="block mb-2 text-sm font-medium">Your Message</label>
