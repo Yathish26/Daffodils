@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home'
-import ComingSoon from './Comingsoon'
+import Error404 from './Error404'
 
 function App() {
 
@@ -9,6 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='*' element={<Error404 />} />
       </Routes>
     </BrowserRouter>
 
