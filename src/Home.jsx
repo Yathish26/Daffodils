@@ -290,7 +290,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <a href="mailto:info@daffodils.com" className="text-gray-300 hover:text-white transition">info@daffodils.com</a>
+                  <a href="mailto:info@daffodils.com" className="text-gray-300 hover:text-white transition">info@grojetdelivery.com</a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -306,7 +306,7 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             className="md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -330,7 +330,7 @@ const Home = () => {
                 Send Message
               </button>
             </form>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
